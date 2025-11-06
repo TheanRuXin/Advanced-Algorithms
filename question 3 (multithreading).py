@@ -4,12 +4,12 @@ import time
 def factorial(n):
     result = 1
     for i in range(2, n + 1):
-        result *= i
+        result = result * i
     return result
 
 def calculate_factorial(n, results, index):
     factorial(n)
-    results[index] = time.perf_counter_ns()  # record finish time
+    results[index] = time.perf_counter_ns() #nanoseconds
 
 if __name__ == "__main__":
     numbers = [50, 100, 200]
